@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.viper.syntax</id>
+    <name>Viper Syntax Highlighting</name>
+    <vendor email="" url="">Roman Roginskii</vendor>
+    <description><![CDATA[
+        Syntax highlighting for the Viper intermediate verification language (<code>.vpr</code> files).<br/>
+        <br/>
+        Features:<br/>
+        <ul>
+            <li>Syntax highlighting for keywords, types, operators, comments, and literals</li>
+            <li>Customizable colors via Settings → Editor → Color Scheme → Viper</li>
+            <li>File type registration for <code>.vpr</code> files</li>
+        </ul>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <fileType
+                name="Viper"
+                implementationClass="com.viper.syntax.ViperFileType"
+                fieldName="INSTANCE"
+                language="Viper"
+                extensions="vpr"/>
+
+        <lang.syntaxHighlighterFactory
+                language="Viper"
+                implementationClass="com.viper.syntax.ViperSyntaxHighlighterFactory"/>
+
+        <colorSettingsPage
+                implementation="com.viper.syntax.ViperColorSettingsPage"/>
+    </extensions>
+</idea-plugin>
