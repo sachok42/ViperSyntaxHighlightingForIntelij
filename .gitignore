@@ -3,7 +3,8 @@
 build/
 
 # IntelliJ IDEA
-.idea/
+.idea/*
+!.idea/dictionaries/
 *.iml
 out/
 
