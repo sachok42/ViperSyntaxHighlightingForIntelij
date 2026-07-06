@@ -1,19 +1,23 @@
+# Gradle
+.gradle/
+build/
+
 # IntelliJ IDEA
 .idea/
 *.iml
 out/
 
-# Gradle
-.gradle/
-build/
-gradle/wrapper/gradle-wrapper.jar
+# IntelliJ Platform plugin cache
+.intellijPlatform/
 
-# Kotlin
+# Kotlin compiler output
 .kotlin/
 
-# OS
+# macOS
 .DS_Store
 
-# Plugin artifacts
-*.zip
-*.jar
+# Signing keys — never commit these
+private.pem
+chain.crt
+*.p12
+*.jks
